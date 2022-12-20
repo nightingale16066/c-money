@@ -1,0 +1,83 @@
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: #392350;
+  border-radius: 10px;
+}
+.title {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 111%;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form > Button {
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  position: relative;
+}
+.item_title {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: #C6B6D7;
+}
+.input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid inherit;
+}
+
+.input:focus, .input:active {
+  border: 2px solid #B865D6;
+}
+.error{
+  color: tomato;
+  position: absolute;
+  bottom: -27%;
+}
+.entry_error {
+  color: tomato;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 70px;
+  }
+}
+@media (max-width: 430px) {
+  .title {
+    font-size: 30px;
+  }
+  .content {
+    padding: 30px 50px;
+  }
+  .item {
+    width: 250px;
+  }
+  .input  {
+    padding: 10px;
+  }
+}

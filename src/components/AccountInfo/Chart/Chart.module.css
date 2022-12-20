@@ -1,0 +1,20 @@
+.chart_wrapper {
+  background: #392350;
+  border-radius: 10px;
+  width: 500px;
+}
+@media (max-width: 1190px) {
+  .chart_wrapper {
+    width: 600px;
+  }
+}
+@media (max-width: 630px) {
+  .chart_wrapper {
+    width: 400px;
+  }
+}
+@media (max-width: 405px) {
+  .chart_wrapper {
+    width: 350px;
+  }
+}

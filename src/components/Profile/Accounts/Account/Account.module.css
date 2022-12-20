@@ -1,0 +1,54 @@
+.link {
+  text-decoration: none;
+}
+.account_content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  color: #C6B6D7;
+  border: 2px solid #392350;
+  background: #392350;
+  border-radius: 10px;
+  width: 330px;
+  /* max-width: 380px; */
+}
+.account_content:hover {
+  border: 2px solid #B865D6;
+}
+.id {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 133%;
+}
+.balance {
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  font-size: 32px;
+  line-height: 138%;
+}
+.acc_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  font-size: 15px;
+  line-height: 133%;
+}
+@media (max-width: 1024px) {
+  .account_content {
+    width: 400px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .account_content {
+    width: 300px;
+  }
+}
+
+@media (max-width: 365px) {
+  .account_content {
+    width: 250px;
+  }
+}

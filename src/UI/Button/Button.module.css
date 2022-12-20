@@ -1,0 +1,51 @@
+.button {
+  background: linear-gradient(87.4deg, #2E00B1 -11.74%, #8100BD 48.81%, #A400BE 113.27%);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.button:hover {
+  background: linear-gradient(88.2deg, #A400BE -14.85%, #8100BD 50.2%, #2E00B1 115.25%, #2E00B1 115.25%);
+}
+
+.button:focus {
+  background: linear-gradient(88.2deg, #2E00B1 -14.85%, #A400BE 50.2%, #2E00B1 115.25%, #2E00B1 115.25%);
+}
+
+.button:active {
+  background: rgba(46, 0, 177, 1);
+}
+
+.default {
+  padding: 22.5px 143px;
+}
+
+.medium {
+  padding: 12px 30px;
+}
+
+.small {
+  padding: 6px 30px;
+}
+@media (max-width: 1230px) {
+  .default {
+    padding: 18.5px 100px;
+  }
+}
+@media (max-width: 880px) {
+  .title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 425px) {
+  .default {
+    padding: 10px 100px;
+  }
+}
+@media (max-width: 430px) {
+  .medium {
+    padding: 8px 25px;
+  }
+}

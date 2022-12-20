@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+.title {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: #C6B6D7;
+}
+.input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid inherit;
+}
+
+.input:focus, .input:active {
+  border: 2px solid #B865D6;
+}

@@ -1,0 +1,67 @@
+.table_wrapper {
+  background: #392350;
+  border-radius: 10px;
+  padding: 20px;
+  width: 580px;
+}
+
+.table {
+  color: #C6B6D7;
+  border-collapse: collapse;
+}
+.thead {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: #C6B6D7;
+}
+td {
+  color: white;
+}
+td:first-child, th:first-child {
+  padding-right: 25px;
+}
+td:nth-child(2) {
+  padding-left: 25px;
+}
+td, th {
+  padding: 10px;
+  width: 150px;
+  border-right: 2px solid #210B36;
+}
+td:last-child, th:last-child {
+  border-right: none;
+}
+.thead_row {
+  border-bottom: 2px solid #210B36;
+}
+.send_money {
+  color: #B865D6;
+}
+.title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 26px;
+  line-height: 112%;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.history {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1190px) {
+  .title {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+  }
+  .table {
+    width: fit-content;
+  }
+}

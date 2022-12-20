@@ -1,0 +1,77 @@
+.exchange {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  background: #392350;
+  border-radius: 10px;
+  max-width: 580px;
+}
+.title_main {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 135%;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+.sendInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.exchange_fields {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+.title {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: #C6B6D7;
+}
+.input {
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid inherit;
+}
+
+.input:focus, .input:active {
+  border: 2px solid #B865D6;
+}
+.form Button {
+  align-self: end;
+  grid-column-start: 2;
+}
+.handler {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.error {
+  color: tomato;
+}
+
+@media (max-width: 560px) {
+  .exchange_fields {
+    flex-direction: column;
+    align-items: center;
+  }
+  .item {
+    width: 280px;
+  }
+}
+@media (max-width: 345px) {
+  .item {
+    width: 250px;
+  }
+}

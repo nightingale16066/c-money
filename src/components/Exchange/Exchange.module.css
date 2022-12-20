@@ -1,0 +1,62 @@
+.tables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.title {
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 112%;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.myCur {
+  margin-top: 20px;
+}
+.cur_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 135%;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+.item_code {
+  display: inline-block;
+  padding-right: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: #C6B6D7;
+}
+.item_amount {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 133%;
+  color: #FFFFFF;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 950px) {
+  .tables {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 460px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

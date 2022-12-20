@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 113%;
+  color: #FFFFFF;
+}
+@media (max-width: 880px) {
+  .title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 580px) {
+  .header {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .header Button {
+    align-self: end;
+  }
+}

@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account {
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 112%;
+  color: #FFFFFF;
+}
+.statisticks {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1185px) {
+  .statisticks {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 880px) {
+  .account {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+
+  .header {
+    gap: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .header Button {
+    align-self: end;
+  }
+}
+@media (max-width: 880px) {
+  .title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 615px) {
+  .account {
+    font-size: 20px;
+  }
+}
+@media (max-width: 615px) {
+  .account {
+    font-size: 18px;
+  }
+}

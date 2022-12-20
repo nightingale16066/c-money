@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  gap: 30px;
+}
+.nav > a {
+  color: #fff;
+  text-decoration: none;
+}
+.exit {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}

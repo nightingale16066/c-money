@@ -1,0 +1,56 @@
+.wrapper {
+  
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title {
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 112%;
+  color: #FFFFFF;
+}
+.sortfield {
+  /* font-family: 'Nunito'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #C6B6D7;
+}
+.sortfield > label {
+  margin-right: 16px;
+}
+.sortType {
+  position: relative;
+  appearance: none;
+  outline: none;
+  border: 1px solid #210B36;
+  background: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+
+.option {
+  background: #210B36;
+  border: 1px solid #210B36;
+  outline: none;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    justify-content: space-around;
+  }
+}
