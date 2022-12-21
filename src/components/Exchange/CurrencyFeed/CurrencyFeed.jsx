@@ -5,7 +5,7 @@ import {ReactComponent as IncreaseIcon} from './img/increase.svg';
 import {ReactComponent as DecreaseIcon} from './img/decrease.svg';
 
 export const CurrencyFeed = props => {
-  const client = new WebSocket(`ws://localhost:3000/currency-feed`);
+  const client = new WebSocket(`ws://childish-right-cast.glitch.me/currency-feed`);
   const [curr, setCurr] = useState([]);
 
   useEffect(() => {
