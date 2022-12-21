@@ -1,1 +1,1 @@
-export const API = 'http://childish-right-cast.glitch.me';
+export const API = 'https://childish-right-cast.glitch.me';
