@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate, useParams} from 'react-router-dom';
 import {accountInfoRequest} from '../../store/accountInfo/accountAction';
 import Button from '../../UI/Button';
@@ -7,9 +7,12 @@ import style from './AccountInfo.module.css';
 import Chart from './Chart';
 import Transaction from './Transaction';
 import TransferTable from './TransferTable';
+import Loader from '../../UI/Loader';
 
 export const AccountInfo = props => {
   const {id} = useParams();
+  const loading = useSelector(state => state.account.loading);
+  console.log('loading: ', loading);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -29,11 +32,16 @@ export const AccountInfo = props => {
         </div>
         <Button text='Вернуться' type='medium' onClick={getBack}/>
       </div>
-      <div className={style.statisticks}>
-        <Chart/>
-        <TransferTable/>
-      </div>
-      <Transaction/>
+      {
+        loading ? <Loader/> :
+        <>
+          <div className={style.statisticks}>
+            <Chart/>
+            <TransferTable/>
+          </div>
+          <Transaction/>
+        </>
+      }
     </>
   );
 };

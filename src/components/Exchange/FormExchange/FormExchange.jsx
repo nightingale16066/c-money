@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+/* eslint-disable max-len */
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   buyCurrency,
@@ -11,6 +12,8 @@ import {useForm} from 'react-hook-form';
 
 export const FormExchange = props => {
   const currencies = useSelector(state => state.currencies.currencies);
+  const [selected1, setSelected1] = useState('');
+  const [selected2, setSelected2] = useState('');
   const buyError = useSelector(state => state.currencies.error);
   const dispatch = useDispatch();
   const {register, handleSubmit, formState: {errors}, reset} = useForm();
@@ -37,23 +40,31 @@ export const FormExchange = props => {
             <div className={style.item}>
               <div className={style.title}>Откуда</div>
               <select className={style.input} {...register('from', {
-                required: 'Укажите счет списания'
+                required: 'Укажите счет списания',
+                onChange: (e) => {
+                  setSelected1(e.target.value);
+                }
               })}>
                 <option value=""></option>
-                {currencies.length && currencies.map(cur => (
-                  <option value={cur} key={cur}>{cur}</option>
-                )) }
+                {currencies.length && currencies.filter(i => i !== selected2)
+                  .map(cur => (
+                    <option value={cur} key={cur}>{cur}</option>
+                  )) }
               </select>
             </div>
             <div className={style.item}>
               <div className={style.title}>Куда</div>
               <select className={style.input} {...register('to', {
-                required: 'Укажите счет зачисления'
+                required: 'Укажите счет зачисления',
+                onChange: (e) => {
+                  setSelected2(e.target.value);
+                }
               })}>
                 <option value=""></option>
-                {currencies.length && currencies.map(cur => (
-                  <option value={cur} key={cur}>{cur}</option>
-                )) }
+                {currencies.length && currencies.filter(i => i !== selected1)
+                  .map(cur => (
+                    <option value={cur} key={cur}>{cur}</option>
+                  ))}
               </select>
             </div>
             <div className={style.item}>

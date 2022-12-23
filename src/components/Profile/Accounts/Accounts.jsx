@@ -4,8 +4,11 @@ import {accountsRequest} from '../../../store/accounts/accountsAction';
 import {accountsSlice} from '../../../store/accounts/accountsSlice';
 import Account from './Account';
 import style from './Accounts.module.css';
+import ClipLoader from '../../../UI/Loader';
 
 export const Accounts = props => {
+  const loading = useSelector(state => state.accounts.loading);
+  console.log('loading: ', loading);
   const dispatch = useDispatch();
   const accounts = useSelector(state => state.accounts.accounts);
   const [selectField, setSelectField] = useState();
@@ -47,12 +50,14 @@ export const Accounts = props => {
           </select>
         </div>
       </div>
-      <div className={style.content}>
-        {
-          accounts.length && accounts.map((account, id) =>
-            (<Account account={account} key={id}/>))
-        }
-      </div>
+      {
+        loading ? <ClipLoader/> : <div className={style.content}>
+          {
+            accounts.length && accounts.map((account, id) =>
+              (<Account account={account} key={id}/>))
+          }
+        </div>
+      }
     </div>
   );
 };

@@ -3,7 +3,7 @@ import {accountInfoRequest, transferFunds} from './accountAction';
 
 const initialState = {
   accountInfo: [],
-  loading: false,
+  loading: true,
   error: '',
   lastOperations: [],
 };

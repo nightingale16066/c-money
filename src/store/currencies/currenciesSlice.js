@@ -8,7 +8,8 @@ import {
 const initialState = {
   currencies: [],
   myCurrencies: [],
-  error: ''
+  error: '',
+  loading: true
 };
 
 export const currenciesSlice = createSlice({
@@ -17,9 +18,11 @@ export const currenciesSlice = createSlice({
   extraReducers: {
     [currenciesRequest.pending.type]: (state) => {
       state.error = '';
+      state.loading = true;
     },
     [currenciesRequest.fulfilled.type]: (state, action) => {
       state.currencies = action.payload.payload;
+      state.loading = false;
     },
     [myCurrenciesRequest.fulfilled.type]: (state, action) => {
       state.myCurrencies = action.payload.payload;

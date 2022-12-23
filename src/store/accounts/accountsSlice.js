@@ -4,7 +4,7 @@ import {accountsRequest, createAccount} from './accountsAction';
 const initialState = {
   accounts: [],
   error: '',
-  loading: false,
+  loading: true,
   account: {}
 };
 
