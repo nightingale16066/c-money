@@ -4,7 +4,7 @@ import style from './Transaction.module.css';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 import {
-  accountInfoRequest,
+  // accountInfoRequest,
   transferFunds
 } from '../../../store/accountInfo/accountAction';
 
@@ -18,7 +18,7 @@ export const Transaction = props => {
   const onSubmit = (data) => {
     const transfer = {...data, from: account};
     dispatch(transferFunds(transfer));
-    dispatch(accountInfoRequest(account));
+    // dispatch(accountInfoRequest(account));
     reset();
   };
 
